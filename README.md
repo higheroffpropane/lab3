@@ -10,15 +10,19 @@
 ## Пользовательский интерфейс
 
 Страница с чатами
+
 ![pages.png](screens/index.png)
 
 Страница какого-нибудь чата
+
 ![pages.png](screens/main.png)
 
 Окошко ввода никнейма
+
 ![pages.png](screens/prompt.png)
 
 Окошко добавления чата
+
 ![pages.png](screens/addchat.png)
 
 
