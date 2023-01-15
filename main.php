@@ -58,14 +58,10 @@ $result1 = $q->fetchAll();
                 let chat_id = document.getElementById('id').value;
                 create_data.append('id', chat_id);
 
-                fetch('http://lab3/main.php', {method: 'POST', body: create_data})
+                fetch('http://lab3/func.php', {method: 'POST', body: create_data})
                     .then(resp => resp.text())
                     .then(chat_id => {
                         alert('Сообщение отправлено');
-                        message="<em>anonim: </em>"+message;
-
-                        document.getElementById('msg').value = ''; //красоты ради
-                        btn_create.removeAttribute('disabled'); //аналогично
 
                         let row1 = document.createElement('div');
                         row1.className = "row mt-2";
@@ -80,13 +76,6 @@ $result1 = $q->fetchAll();
 
             })
         </script>
-        <?php
-        $msg1 = $_POST['msg'];
-        $sql = ("INSERT INTO `$id` (`name`, `msg`, `date`) VALUES (`anon`,?,?)");
-        $query = $pdo->prepare($sql);
-        $query->execute([$msg1, $date]);
-        ?>
-        //сюда окошко для сообщения
     </div>
 </div>
 

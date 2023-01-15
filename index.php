@@ -21,8 +21,6 @@ include 'func.php';
                 <?php foreach ($result as $value) { ?>
                 <div class="card-body" style="background: bisque; border-radius: 10px; margin-bottom: 10px">
                     <div class="row" style="background: burlywood; border-radius: 10px; font-size: x-large">
-<!--                                //ссылку нужно на main и передавать GET запросом id чата-->
-<!--                                //открытый чат в строке адреса должен выглядеть как ".../lab3/main?open=(1/2/3...)"-->
                         <div class="col-sm-6"><a href="main.php?open=<?=$value['title'] ?> " class="link-primary" target="_blank"><?=$value['title']?></a></div>
                         <?php require 'modal.php'; ?>
                     </div>
